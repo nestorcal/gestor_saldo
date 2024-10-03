@@ -4,11 +4,11 @@
 IF NOT EXISTS (SELECT name from sys.databases where name='GestorSaldo')
     BEGIN
         CREATE DATABASE GestorSaldo;
-        PRINT 'Base de datos GestorSaldo creado'
+        PRINT 'Base de datos GestorSaldo creado';
     END
 ELSE
     BEGIN
-        PRINT 'La base de datos GestorSaldo ya existe'
+        PRINT 'La base de datos GestorSaldo ya existe';
     END
 GO
 
@@ -21,11 +21,11 @@ IF NOT EXISTS (SELECT * from sysobjects WHERE name='Saldos')
             ID INT IDENTITY(1,1) PRIMARY KEY,
             Monto DECIMAL(10,2) NOT NULL 
         );
-        PRINT 'Tabla Saldos creada'
+        PRINT 'Tabla Saldos creada';
     END
 ELSE
     BEGIN
-        PRINT 'La Tabla Saldos ya existe'
+        PRINT 'La Tabla Saldos ya existe';
     END
 GO
 
@@ -35,11 +35,11 @@ IF NOT EXISTS (SELECT * from sysobjects WHERE name='Gestores')
             ID INT IDENTITY(1,1) PRIMARY KEY,
             Nombre VARCHAR(50) NOT NULL
         );
-        PRINT 'Tabla Gestores creada'
+        PRINT 'Tabla Gestores creada';
     END
 ELSE
     BEGIN
-        PRINT 'La Tabla Gestores ya existe'
+        PRINT 'La Tabla Gestores ya existe';
     END
 GO
 
@@ -52,11 +52,11 @@ IF NOT EXISTS (SELECT * from sysobjects WHERE name='Asignaciones')
             FOREIGN KEY (GestorID) REFERENCES Gestores(ID),
             FOREIGN KEY (SaldoID) REFERENCES Saldos(ID)
         );
-        PRINT 'Tabla Asignaciones creada'
+        PRINT 'Tabla Asignaciones creada';
     END
 ELSE
     BEGIN
-        PRINT 'La Tabla Asignaciones ya existe'
+        PRINT 'La Tabla Asignaciones ya existe';
     END
 GO
 
@@ -73,5 +73,17 @@ IF NOT EXISTS (SELECT TOP 1 1 FROM Saldos)
     END
 ELSE
     BEGIN
-            PRINT 'La Tabla Saldos ya tiene Datos'
+            PRINT 'La Tabla Saldos ya tiene Datos';
+    END
+
+-- DAtos Gestores
+IF NOT EXISTS (SELECT TOP 1 1 FROM Gestores)
+    BEGIN
+        INSERT INTO Gestores(Nombre) VALUES ('Gestor1'), ('Gestor2'), ('Gestor3'), 
+        ('Gestor4'), ('Gestor5'), ('Gestor6'), ('Gestor7'), ('Gestor8'),
+        ('Gestor9'), ('Gestor10');
+    END
+ELSE
+    BEGIN
+                PRINT 'La Tabla Gestores ya tiene Datos';
     END
