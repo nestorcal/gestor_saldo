@@ -14,4 +14,4 @@ Se tiene en cuenta lo siguiente
 1. Clonar el repositorio.
 2. Abrir SQL Server Management Studio.
 3. Ejecutar [script de creacion de BD y tablas](https://github.com/nestorcal/gestor_saldo/blob/master/crearBdTalas.sql) y el [script de procedimiento almacenado](https://github.com/nestorcal/gestor_saldo/blob/master/asignarSaldosGestores.sql) en el servidor.
-4. Ejecutar el programa en C#
+4. Ejecutar el [programa en C#](https://github.com/nestorcal/gestor_saldo/tree/master/ConsoleApp1)
