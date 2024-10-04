@@ -36,6 +36,7 @@ BEGIN
         SELECT ID, Gestores
         FROM GestorSaldo.dbo.Gestores;
 
+    -- Iteraciones
     WHILE @IteracionActual <= @Iteraciones
         BEGIN
             OPEN gestorCursor;
