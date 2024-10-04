@@ -9,6 +9,8 @@ Se tiene en cuenta lo siguiente
 - Repetir el proceso hasta que todos los saldos estén asignados a los gestores.
 - El número de iteraciones debe ser igual a la división redondeada hacia arriba del número de saldos por el número de gestores.
 
+La validacion se hace desde el programa en C#
+
 ## Uso
 
 1. Clonar el repositorio.
